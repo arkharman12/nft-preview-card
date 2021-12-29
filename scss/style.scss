@@ -17,6 +17,105 @@ $white: hsl(0, 0%, 100%);
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     font-size: 18px;
     font-family: 'Outfit', sans-serif;
+    background-color: $very-dark-blue-main-BG;
+}
+
+.container {
+    background-color: $very-dark-blue-card-BG;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    
+    .content-wrapper {
+        text-align: center;
+
+        img.nft-image {
+            width: 250px;
+            height: 250px;
+            margin: 20px 0px 20px 0;
+            border-radius: 10px;
+        }
+
+        .title {
+            text-align: left;
+            color: $white;
+            margin-left: 20px;
+        }
+
+        .sub-title {
+            text-align: left;
+            color: $soft-blue;
+            margin: 15px 0 15px 20px;
+            font-size: 16px;
+        }
+
+        .values {
+            display: flex;
+            justify-content: space-between;
+            color: $cyan;
+            margin: 0 20px 0 20px;
+            font-size: 16px;
+
+            .price {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    margin-left: 5px;
+                }
+            }
+
+            .time {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    margin-left: 5px;
+                    color: $soft-blue;
+                }
+            }
+        }
+
+        hr {
+            margin: 15px 20px 0 20px;
+            height: 1px;
+            background-color: $very-dark-blue-line;
+            border: none;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin: 15px 0 0 20px;
+            font-size: 14px;
+
+            .avatar {
+                img {
+                    height: 30px;
+                    width: 30px;
+                    border: 1px solid $white;
+                    border-radius: 50%;
+                }
+            }
+
+            .name {
+                color: $soft-blue;
+                margin-left: 10px;
+
+                p {
+                    span {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
 }
