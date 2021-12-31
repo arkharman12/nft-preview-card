@@ -24,6 +24,10 @@ body {
     font-size: 18px;
     font-family: 'Outfit', sans-serif;
     background-color: $very-dark-blue-main-BG;
+
+    span {
+        cursor: pointer;
+    }
 }
 
 .container {
@@ -36,11 +40,48 @@ body {
     .content-wrapper {
         text-align: center;
 
-        img.nft-image {
-            width: 250px;
-            height: 250px;
-            margin: 20px 0px 20px 0;
-            border-radius: 10px;
+        
+        .image-container {
+            cursor: pointer;
+            position: relative;
+
+            .nft-image {
+                width: 250px;
+                height: 250px;
+                margin: 20px 0px 20px 0;
+                border-radius: 10px;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                position: absolute;
+                width: 250px;
+                height: 250px;
+                margin: 20px 25px;
+                border-radius: 10px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: hsla(178, 100%, 50%, 0.5);
+
+                .eye-svg {
+                    transition: .5s ease;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+        }
+
+        .image-container:hover .middle {
+            opacity: 1;
         }
 
         .title {
